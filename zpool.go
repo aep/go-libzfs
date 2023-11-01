@@ -214,7 +214,7 @@ func poolGetConfig(name string, nv C.nvlist_ptr) (vdevs VDevTree, err error) {
 		vdevs.ScanStat.EndTime = uint64(ps.pss_end_time)
 		vdevs.ScanStat.ToExamine = uint64(ps.pss_to_examine)
 		vdevs.ScanStat.Examined = uint64(ps.pss_examined)
-		vdevs.ScanStat.ToProcess = uint64(ps.pss_to_process)
+		//vdevs.ScanStat.ToProcess = uint64(ps.pss_to_process)
 		vdevs.ScanStat.Processed = uint64(ps.pss_processed)
 		vdevs.ScanStat.Errors = uint64(ps.pss_errors)
 		vdevs.ScanStat.PassExam = uint64(ps.pss_pass_exam)
@@ -303,6 +303,7 @@ func poolGetL2Cache(name string, nv C.nvlist_ptr) (vdevs []VDevTree, err error) 
 	return
 }
 
+/*
 // PoolImportSearch - Search pools available to import but not imported.
 // Returns array of found pools.
 func PoolImportSearch(searchpaths []string) (epools []ExportedPool, err error) {
@@ -454,6 +455,7 @@ func PoolImportByGUID(guid string, searchpaths []string) (pool Pool, err error) 
 	pool, err = PoolOpen(name)
 	return
 }
+*/
 
 // func PoolList(paths []string, cache string) (pools []Pool, err error) {
 //

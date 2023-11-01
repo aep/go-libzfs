@@ -10,7 +10,6 @@ import "C"
 import (
 	"errors"
 	"fmt"
-	"path"
 	"sort"
 	"strings"
 	"sync"
@@ -508,6 +507,8 @@ func (d *Dataset) Promote() (err error) {
 	return
 }
 
+
+/*
 // Rename dataset
 func (d *Dataset) Rename(newName string, recur,
 	forceUnmount bool) (err error) {
@@ -525,6 +526,7 @@ func (d *Dataset) Rename(newName string, recur,
 	d.ReloadProperties()
 	return
 }
+*/
 
 // IsMounted checks to see if the mount is active.  If the filesystem is mounted,
 // sets in 'where' argument the current mountpoint, and returns true.  Otherwise,
@@ -690,6 +692,7 @@ func DatasetPropertyToName(p Prop) (name string) {
 	return
 }
 
+/*
 // DestroyPromote - Same as DestroyRecursive() except it will not destroy
 // any dependent clones, but promote them first.
 // This function will navigate any dependency chain
@@ -765,6 +768,8 @@ func (d *Dataset) DestroyPromote() (err error) {
 	}
 	return
 }
+
+*/
 
 // Snapshots - filter and return all snapshots of dataset
 func (d *Dataset) Snapshots() (snaps []Dataset, err error) {
